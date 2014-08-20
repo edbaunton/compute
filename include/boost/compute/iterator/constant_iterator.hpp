@@ -87,6 +87,13 @@ public:
         return m_index;
     }
 
+    T read(command_queue &queue) const
+    {
+        (void) queue;
+
+        return m_value;
+    }
+
     /// \internal_
     template<class Expr>
     detail::meta_kernel_literal<T> operator[](const Expr &expr) const

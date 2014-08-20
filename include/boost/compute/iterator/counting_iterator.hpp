@@ -102,6 +102,13 @@ public:
         return 0;
     }
 
+    T read(command_queue &queue) const
+    {
+        (void) queue;
+
+        return m_init;
+    }
+
     template<class Expr>
     detail::counting_iterator_index_expr<T, Expr>
     operator[](const Expr &expr) const

@@ -99,6 +99,12 @@ public:
     {
     }
 
+    template<class T>
+    void write(const T &value)
+    {
+        (void) value;
+    }
+
     /// \internal_
     template<class Expr>
     detail::discard_iterator_index_expr<Expr>
